@@ -128,7 +128,7 @@ jobs:
         run: pip install Pillow==6.2.2
         if: ${{matrix.torchvision < 0.5}}
       - name: Install PyTorch
-        run: pip install torch==${{matrix.torch}+cu101} torchvision==${{matrix.torchvision}} -f https://download.pytorch.org/whl/torch_stable.html
+        run: pip install torch==${{matrix.torch}}+cu101 torchvision==${{matrix.torchvision}} -f https://download.pytorch.org/whl/torch_stable.html
       - name: Install mmdet dependencies
         run: |
           pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu101/torch${{matrix.torch}}/index.html
